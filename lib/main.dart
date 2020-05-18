@@ -18,25 +18,37 @@ class MyApp extends StatelessWidget {
         appBar: AppBar(
           title: Text('Cadastrando produto'),
         ),
-        body: Column(
-        children: <Widget>[
-          TextField(controller: _controleNome,),
-          TextField(controller: _controleQuantidade,),
-          TextField(controller: _controleValor,),
-          RaisedButton(
+        body: Padding(
+          padding: const EdgeInsets.all(18.0),
+          child: Column(
+          children: <Widget>[
+            Padding(
+              padding: const EdgeInsets.all(10.0),
+              child: TextField(controller: _controleNome,),
+            ),
+            Padding(
+              padding: const EdgeInsets.all(10.0),
+              child: TextField(controller: _controleQuantidade,),
+            ),
+            Padding(
+              padding: const EdgeInsets.all(10.0),
+              child: TextField(controller: _controleValor,),
+            ),
+            RaisedButton(
       child: Text('Cadastrar'),
       onPressed: () {
 
-        final String nome = _controleNome.text;
-        final int quantidade = int.tryParse(_controleQuantidade.text);
-        final double valor = double.tryParse(_controleValor.text);
-        
-        final Produto produtoNovo = Produto(nome, quantidade, valor);
-        print(produtoNovo);
+          final String nome = _controleNome.text;
+          final int quantidade = int.tryParse(_controleQuantidade.text);
+          final double valor = double.tryParse(_controleValor.text);
+          
+          final Produto produtoNovo = Produto(nome, quantidade, valor);
+          print(produtoNovo);
       },
     )
-        ],
+          ],
       ),
+        ),
     ),
   );
 }
