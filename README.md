@@ -1,4 +1,4 @@
-# mercado
+# App cadastro de produtos
 
 A new Flutter project.
 
