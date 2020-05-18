@@ -24,15 +24,27 @@ class MyApp extends StatelessWidget {
           children: <Widget>[
             Padding(
               padding: const EdgeInsets.all(10.0),
-              child: TextField(controller: _controleNome,),
+              child: TextField(
+                controller: _controleNome,
+                decoration: InputDecoration(labelText: 'Descrição'),
+                keyboardType: TextInputType.text,
+                ),
             ),
             Padding(
               padding: const EdgeInsets.all(10.0),
-              child: TextField(controller: _controleQuantidade,),
+              child: TextField(
+                controller: _controleQuantidade,
+                decoration: InputDecoration(labelText: 'Quantidade'),
+                keyboardType: TextInputType.number,
+                ),
             ),
             Padding(
               padding: const EdgeInsets.all(10.0),
-              child: TextField(controller: _controleValor,),
+              child: TextField(
+                controller: _controleValor,
+                decoration: InputDecoration(labelText: 'Valor'),
+                keyboardType: TextInputType.number,
+                ),
             ),
             RaisedButton(
       child: Text('Cadastrar'),
